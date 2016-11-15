@@ -15,7 +15,7 @@ Open Terminal
 
 Clone App
 
-Download Cors Extension https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
+Download Cors Extension https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en (enable CORS extension)
 
 Run App via live-server(Node)
 
