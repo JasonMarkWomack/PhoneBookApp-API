@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="phoneBook">
+<head>
+  <title>I am a phonebook :)</title>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title">
+</head>
+<body ng-controller="MainController">
+  <h3 class="welcome">Welcome To Your Phonebook</h3>
+  <br>
+<div ng-show="isAwesome">  <ul>
+    <ul ng-repeat="x in users">
+      {{ x.phone_number + ', '  + x.name  +  ', ' + x.address}}
+    </ul>
+  </ul></div>
+
+  <h3>Display All Contacts</h3>
+  <button ng-click="awesomeClicked()">Click Me</button>
+
+
+
+  <br>
+  <h3> Contact Filtering </h3>
+<input ng-model="usersFilterText" placeholder="Contact Information"/>
+
+<ul>
+  <ul ng-repeat="x in users | filter: usersFilterText">{{x.phone_number}} {{x.name}} {{x.address}} </ul>
+</ul>
+<br>
+<br>
+<h3>Add Your Favorite Contacts</h3>
+
+<form ng-submit="submit()" >
+  Enter Contact Informantion:
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="Submit" />
+
+    <ul ng-repeat="y in arr track by $index">{{y}}</ul>
+
+
+</form>
+
+
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
